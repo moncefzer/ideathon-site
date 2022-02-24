@@ -1,0 +1,253 @@
+//import global rules
+@import "assets/sass/global-rules";
+
+//import variables
+@import "assets/sass/variables";
+
+//imoprt helpers
+@import "assets/sass/helpers/mixins";
+
+//use functions
+@import "assets/sass/helpers/functions";
+
+.header {
+  // align-items: center;
+  height: 80px;
+  background-color: $white-color;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    a.logo > img {
+      max-width: 80px;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      li a {
+        position: relative;
+        margin-left: rem(45);
+        color: $dark-font;
+        font-size: rem(19);
+        font-weight: 600;
+        transition: $transition-duration;
+
+        &:hover {
+          color: $white-blue-color;
+        }
+
+        &::after {
+          content: "";
+          position: absolute;
+          left: 0;
+          bottom: -4px;
+          width: 0;
+          height: 4px;
+          background-color: $white-blue-color;
+          transition: $transition-duration;
+        }
+
+        &:hover::after {
+          width: 100%;
+        }
+      }
+    }
+
+    @include tablet {
+      .navbar {
+        // display: none;
+        flex-direction: column;
+        // position: absolute;
+        top: 0;
+        padding: 30px 10px 40vh;
+        right: -100%;
+        width: 80%;
+        height: 100vh;
+        max-width: 300px;
+        z-index: 2;
+        background: $blue-linear-gradient;
+        transition: $transition-duration + 1s;
+
+        position: fixed;
+
+        > li > a {
+          margin-left: 0;
+          color: $white-color;
+        }
+      }
+
+      .navbar.open {
+        right: 0;
+      }
+    }
+
+    .toggle-nav {
+      font-size: rem(24);
+      color: $dark-font;
+      display: none;
+      z-index: 55;
+    }
+
+    @include tablet {
+      .toggle-nav {
+        display: block;
+      }
+    }
+  }
+}
+
+//start landing
+.landing {
+  min-height: calc(100vh - 80px);
+  background-color: $main-background-color;
+  padding: 50px 0;
+
+  .container:first-child {
+    display: flex;
+    justify-content: space-between;
+
+    .landing_img {
+      flex: 30%;
+      margin-right: 70px;
+      img {
+        max-width: 100%;
+      }
+    }
+
+    @include tablet {
+      .landing_img {
+        display: none;
+      }
+    }
+
+    .landing_content {
+      flex: 45%;
+
+      .landing_title {
+        color: $white-blue-color;
+        margin-bottom: rem(25);
+        font-size: rem(65);
+        font-weight: 700;
+
+        span {
+          font-weight: 600;
+        }
+      }
+
+      @include mobile {
+        .landing_title {
+          font-size: rem(30);
+        }
+      }
+
+      p {
+        color: $dark-font;
+        font-size: rem(19);
+        margin-bottom: rem(40);
+        line-height: 1.9;
+        font-weight: 500;
+      }
+
+      .link-teaser-vid a {
+        display: flex;
+        align-items: center;
+        color: $white-blue-color;
+        font-size: rem(22);
+        margin-left: rem(50);
+        font-weight: 600;
+
+        i.fa-circle-play {
+          font-size: rem(45);
+          margin-right: rem(10);
+          background-color: $blue-linear-gradient;
+        }
+      }
+      @include mobile {
+        .link-teaser-vid a {
+          margin-left: rem(10);
+        }
+      }
+    }
+  }
+
+  @include mobile {
+    .container:first-child {
+      text-align: center;
+    }
+  }
+
+  .container:last-child {
+    .info-card {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: rem(25);
+      max-width: 800px;
+      margin-left: auto;
+      background-color: $white-color;
+      padding: rem(33) rem(61);
+      border-radius: rem(15);
+      box-shadow: $box-shadow;
+
+      li:not(:last-child) {
+        font-size: rem(17);
+        color: #a8a8a8;
+        span {
+          font-size: rem(19);
+          margin-top: rem(13);
+          font-weight: 600;
+          color: $dark-font;
+        }
+
+        @media (min-width: 769px) {
+          span {
+            display: block;
+          }
+        }
+      }
+
+      li:last-child a {
+        background: $blue-linear-gradient;
+        padding: rem(15) rem(24);
+        border-radius: rem(7);
+        color: $white-color;
+
+        &:hover {
+          background-color: $white-blue-color;
+        }
+      }
+    }
+
+    @include mobile {
+      .info-card {
+        padding: rem(27) rem(20);
+        padding-right: rem(5);
+        flex-direction: column;
+
+        li {
+          width: 100%;
+          margin-bottom: 10px;
+
+          span {
+            display: inline-block;
+            margin: 0 0 0 10px;
+          }
+        }
+
+        li:last-child {
+          margin-top: rem(25);
+
+          a {
+            margin-left: auto;
+            margin-right: auto;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,20 @@
+//map of font weight we use it to return values
+$font-weights: (
+  "regular": 400,
+  "medium": 500,
+  "bold": 700,
+);
+
+$mobile-width: 768px;
+$tablet-width: 992px;
+$pc-width: 1200px;
+
+$white-blue-color: #0b60df;
+$dark-blue-color: #373b51;
+$dark-font: #373b51;
+$main-background-color: #e4e9ee;
+$white-color: #f7f8fa;
+$black-color: #000000;
+$blue-linear-gradient: linear-gradient(110deg, #1d8fe3 20%, #0b60df 100%);
+$transition-duration: 0.2s;
+$box-shadow: 2px 2px 8px #aaa;
