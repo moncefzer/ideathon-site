@@ -441,19 +441,9 @@ body {
   }
 }
 
-.col.trainer img::after {
-  content: "";
-  width: 100%;
-  height: 100%;
-  background-color: blue;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
 /* start trainings */
 .trainings {
-  padding: 100px 0;
+  padding: 100px 0 0;
 }
 
 .trainings .main-heading {
@@ -590,6 +580,79 @@ body {
   line-height: 1.8;
   color: #6e7498;
   font-size: 1.0625rem;
+}
+
+.event-agenda {
+  padding: 40px 1.25rem;
+  text-align: center;
+  color: #373b51;
+}
+
+.event-agenda h4.day {
+  font-size: 1.875rem;
+  margin-bottom: 3.125rem;
+  font-weight: 500;
+}
+
+.event-agenda .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 1.875rem;
+}
+
+.event-agenda .row .col {
+  max-width: 500px;
+}
+
+.event-agenda .row .col .time {
+  margin-bottom: 1.875rem;
+  font-size: 1.375rem;
+  font-weight: 500;
+}
+
+.event-agenda .row .col img {
+  max-width: 100%;
+  border-radius: 7px;
+}
+
+@media (min-width: 992px) {
+  .event-agenda .row .col:not(:last-child) {
+    margin-right: 1.25rem;
+  }
+}
+
+.event-agenda .row:first-child {
+  margin-bottom: 3.125rem;
+}
+
+.event-agenda .row:last-child {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media (max-width: 992px) {
+  .event-agenda .row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .event-agenda .row .col {
+    margin: 0;
+    margin-bottom: 3.125rem;
+  }
+  .event-agenda .row .col .time {
+    font-size: 1.3125rem;
+    margin-bottom: 1.25rem;
+  }
 }
 
 .main-heading {
