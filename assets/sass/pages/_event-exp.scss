@@ -1,0 +1,19 @@
+/* start event exp */
+.event-exp {
+  padding-top: $section-padding;
+  padding-bottom: $section-padding;
+}
+
+.event-exp .container {
+  text-align: center;
+}
+
+.event-exp .container .main-heading {
+  margin-bottom: 25px;
+}
+
+.event-exp .container > p {
+  line-height: 1.8;
+  color: $main-font;
+  font-size: rem(17);
+}

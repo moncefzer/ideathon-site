@@ -1,0 +1,113 @@
+.col.trainer img::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: blue;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+/* start trainings */
+.trainings {
+  padding: 100px 0;
+
+  .main-heading {
+    margin-bottom: 80px;
+  }
+
+  .container .row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .col.trainer {
+      position: relative;
+      flex-basis: 43%;
+      img {
+        display: block;
+        height: 100%;
+        border-radius: 10px;
+        transition: $transition-duration;
+        box-shadow: -2px 7px 10px rgba(170, 170, 170, 0.719);
+      }
+
+      .back {
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: $blue-linear-gradient;
+        height: 100%;
+        width: 100%;
+        z-index: -1;
+        border-radius: 10px;
+        transition: $transition-duration;
+      }
+    }
+
+    .col.training-dis {
+      flex-basis: 50%;
+      transition: $transition-duration;
+
+      > h3 {
+        font-size: rem(32);
+        font-weight: 400;
+        color: $white-blue-color;
+        margin-bottom: rem(7);
+      }
+
+      > p {
+        line-height: 1.8;
+        color: $main-font;
+        font-size: rem(17);
+      }
+    }
+
+    @media (min-width: $tablet-width) {
+      &:hover {
+        .col.trainer img {
+          transform: translate(25px, -10px);
+        }
+        .col.trainer .back {
+          transform: translate(-10px, 10px);
+        }
+
+        .col.training-dis {
+          transform: translateX(25px);
+        }
+      }
+
+      &.reverse:hover {
+        .col.training-dis {
+          transform: translateX(-25px);
+        }
+      }
+    }
+  }
+
+  @media (min-width: $mobile-width) {
+    .container .row:not(:last-child) {
+      margin-bottom: rem(150);
+    }
+  }
+
+  .row.reverse .col.trainer {
+    order: 2;
+  }
+
+  @include mobile {
+    .row {
+      flex-direction: column;
+      margin-bottom: rem(30);
+      text-align: center;
+
+      .col {
+        margin-bottom: rem(30);
+      }
+    }
+    .row.reverse .col.trainer {
+      order: 0;
+    }
+  }
+}
+
+/* end trainings */

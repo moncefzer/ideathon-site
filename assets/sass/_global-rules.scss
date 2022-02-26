@@ -1,3 +1,6 @@
+//import variables
+@import "./variables";
+
 *,
 *::after,
 *::before {
@@ -21,12 +24,17 @@ a {
   padding-right: 15px;
 }
 
+img {
+  max-width: 100%;
+}
+
 html {
   scroll-behavior: smooth;
 }
 
 body {
   font-family: "Roboto", sans-serif;
+  background-color: $main-background-color;
 }
 /* the principal container which containe the hole content */
 .container {
