@@ -1,0 +1,107 @@
+footer {
+  background-color: $second-background-color;
+  border-radius: 20px 20px 0 0;
+  padding: $section-padding + 40px 0;
+  color: $white-color;
+
+  img {
+    max-width: 80px;
+  }
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .col.left {
+      > img {
+        margin-bottom: rem(25);
+        margin-left: -10px;
+      }
+
+      .club-def {
+        margin-bottom: rem(30);
+        font-size: rem(16);
+        max-width: rem(350);
+        line-height: 1.7;
+      }
+
+      .club-email {
+        font-size: rem(22);
+        font-weight: weight(bold);
+        margin-bottom: rem(40);
+      }
+
+      .social-icons {
+        @include flexBetween;
+        max-width: rem(150);
+        font-size: rem(30);
+
+        li a {
+          color: $white-color;
+        }
+      }
+    }
+
+    .col.right {
+      .navbar {
+        .row {
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          margin-bottom: rem(30);
+          margin-left: rem(30);
+
+          a {
+            color: white;
+            margin-right: rem(50);
+            font-size: rem(20);
+            transition: $transition-duration;
+
+            &:hover {
+              color: $white-blue-color;
+            }
+          }
+        }
+      }
+
+      .row.imgs {
+        @include flexBetween;
+        // margin-left: rem(-30);
+      }
+    }
+    @include tablet {
+      .col.right {
+        padding-top: rem(50);
+        flex: 400px;
+        .navbar {
+          a {
+            font-size: rem(18);
+          }
+        }
+      }
+    }
+  }
+}
+
+@include mobile {
+  footer {
+    padding: 30px 0;
+    .container {
+      display: block;
+      .col.left {
+        text-align: center;
+
+        .club-def {
+          max-width: 100%;
+        }
+
+        .social-icons {
+          margin: 0 auto;
+        }
+      }
+      .col.right {
+        display: none;
+      }
+    }
+  }
+}
