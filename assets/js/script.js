@@ -12,3 +12,7 @@ for (let i = 0; i < navlinks.length; i++) {
     nav.classList.toggle("open");
   });
 }
+
+document.body.onscroll = () => {
+  nav.classList.remove("open");
+};

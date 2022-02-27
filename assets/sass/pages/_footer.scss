@@ -66,6 +66,9 @@ footer {
 
       .row.imgs {
         @include flexBetween;
+        img:first-child {
+          margin-left: 15px;
+        }
         // margin-left: rem(-30);
       }
     }

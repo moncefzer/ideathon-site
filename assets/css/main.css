@@ -831,6 +831,10 @@ footer .container .col.right .row.imgs {
           align-items: center;
 }
 
+footer .container .col.right .row.imgs img:first-child {
+  margin-left: 15px;
+}
+
 @media (max-width: 992px) {
   footer .container .col.right {
     padding-top: 3.125rem;
