@@ -1,0 +1,75 @@
+.concepts {
+  .container {
+    .main-heading {
+      margin-bottom: rem(90);
+      color: #171924;
+    }
+    .content {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      background-color: #3b405b;
+      // background-color: $white-blue-color;
+      padding: 10px 0 0 0;
+      border-radius: rem(10);
+      max-width: 1000px;
+      margin-inline: auto;
+      // transition: 5s;
+
+      li {
+        padding: 45px 50px 0px;
+        text-align: center;
+        font-size: rem(21);
+        font-weight: 500;
+        border-radius: 50px 50px 0 0;
+        transition: 0.5s;
+        background-color: transparent;
+        text-transform: capitalize;
+        // background-color: blue;
+        i {
+          display: grid;
+          place-items: center;
+          font-size: rem(55);
+          margin-bottom: 35px;
+          color: #171924;
+          transition: 0.5s;
+        }
+
+        span {
+          font-size: rem(14);
+          margin-top: 20px;
+          // display: none;
+          display: block;
+          opacity: 0;
+          transition: 0.5s;
+        }
+      }
+
+      li:last-child {
+        padding-inline: 30px;
+      }
+
+      li:hover {
+        background: linear-gradient(180deg, #0569ff, transparent);
+        color: white;
+        transform: translateY(-40px);
+        border-radius: 15px 15px 0 0;
+
+        i {
+          margin-bottom: 20px;
+        }
+
+        span {
+          display: block;
+          margin-top: 5px;
+          opacity: 1;
+        }
+      }
+    }
+
+    @media (min-width: 490px) and (max-width: 750px) {
+      .content {
+        grid-template-columns: repeat(auto-fit, minmax(235px, 1fr));
+      }
+    }
+  }
+}
