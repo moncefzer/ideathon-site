@@ -151,8 +151,12 @@ body {
 
 /* end global rules */
 .header {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   height: 80px;
   background-color: #f7f8fa;
+  padding-top: 10px;
 }
 
 .header .container {
@@ -168,7 +172,7 @@ body {
 }
 
 .header .container a.logo > img {
-  max-width: 80px;
+  max-width: 60px;
 }
 
 .header .container .navbar {
@@ -484,6 +488,7 @@ body {
 .concepts .container .content li span {
   font-size: 0.875rem;
   margin-top: 20px;
+  color: white;
   display: block;
   opacity: 0;
   -webkit-transition: 0.5s;
@@ -592,8 +597,8 @@ body {
 
 @media (min-width: 992px) {
   .trainings .container .row:hover .col.trainer img {
-    -webkit-transform: translate(25px, -10px);
-            transform: translate(25px, -10px);
+    -webkit-transform: translate(25px, -25px);
+            transform: translate(25px, -25px);
   }
   .trainings .container .row:hover .col.trainer .back {
     -webkit-transform: translate(-10px, 10px);

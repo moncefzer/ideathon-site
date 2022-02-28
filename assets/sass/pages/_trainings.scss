@@ -56,7 +56,7 @@
     @media (min-width: $tablet-width) {
       &:hover {
         .col.trainer img {
-          transform: translate(25px, -10px);
+          transform: translate(25px, -25px);
         }
         .col.trainer .back {
           transform: translate(-10px, 10px);

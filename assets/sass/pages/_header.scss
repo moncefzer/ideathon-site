@@ -1,7 +1,8 @@
 .header {
-  // align-items: center;
+  align-items: center;
   height: 80px;
   background-color: $white-color;
+  padding-top: 10px;
 
   .container {
     display: flex;
@@ -9,7 +10,7 @@
     align-items: center;
 
     a.logo > img {
-      max-width: 80px;
+      max-width: 60px;
     }
 
     .navbar {
